@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div>home</div>
+        <div>homeless</div>
         
     </div>
 </template>
