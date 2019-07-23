@@ -2,8 +2,8 @@
     <swiper :options="swiperOption">
         <swiper-slide v-for="img of imgList" :key="img.id">
              <img :src="img.src"  class="swiper-img"/>
-    </swiper-slide>
-    <div class="swiper-pagination"  slot="pagination"></div>
+        </swiper-slide>
+        <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
 </template>
 <script>
@@ -14,8 +14,12 @@ export default {
         return{
             swiperOption:{
                 loop:true,
+                // loop使最后的图和第一张衔接
                 pagination : '.swiper-pagination',
-                paginationClickable :true
+                paginationClickable :true,
+                // 使圆点可以点击
+                autoplay:3000,
+                autoplayDisableOnInteraction:false
             },
             imgList:[
                 {id:0,src:'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20196/818f6cc784ae6669b74bbbb255414a53.jpg_750x200_66ca5873.jpg'},
@@ -28,7 +32,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     .swiper-pagination ::v-deep .swiper-pagination-bullet-active{
-        background:$topFontColor
+        background:$topFontColor;
     }
     .swiper-img{
         width: 100vw;
