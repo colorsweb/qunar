@@ -1,12 +1,16 @@
 <template>
     <div>
-        <div>homeless</div>
-        
+        <home-header />
     </div>
 </template>
 <script>
+import HomeHeader from './homeComponents/HomeHeader'
+
 export default {
-    name:'Home'
+    name:'Home',
+    components:{
+        HomeHeader
+    }
 }
 </script>
 <style lang="scss" scoped>

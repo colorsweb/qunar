@@ -4,6 +4,8 @@
   </div>
 </template>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+  #app{
+    font-size:vw(28);
+  }
 </style>

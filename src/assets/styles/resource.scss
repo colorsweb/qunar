@@ -1,0 +1,4 @@
+$mainColor: #00bcdc;
+@function vw($px) {
+    @return ($px / 750) * 100vw;
+  }
