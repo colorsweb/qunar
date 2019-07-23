@@ -3,7 +3,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="display:none">
             <symbol id="back" viewBox="0 0 129 129">
                 <g>
-                    <path d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z"/>
+                    <path d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z" />
                 </g>
             </symbol>
             <symbol id="search" viewBox="0 0 480.356 480.356">
@@ -45,20 +45,22 @@ export default {
         align-items: center;
         height: vw(86);
         background:$mainColor;
+        color:$topFontColor;
         .headerLeft{
             width: vw(64);
             text-align: center;
             .back{
                 width: vw(45);
                 height: vw(45);
+                fill: $topFontColor;
             }
         }
         .headerInput{
             flex-grow: 1;
-            color:#ccc;
+            color:#aaa;
             height: vw(64);
             line-height: vw(64);
-            background: #fff;
+            background: $topFontColor;
             border-radius: 5px;
             padding-left: vw(65);
             position: relative;
@@ -68,6 +70,7 @@ export default {
                 left: vw(12);
                 width:vw(40);
                 height:vw(40);
+                fill:#aaa;
             }
         }
         .headerRight{
@@ -76,6 +79,7 @@ export default {
             .downArrow{
                 width:vw(20);
                 height:vw(20);
+                fill:$topFontColor;
             }
         }
     }

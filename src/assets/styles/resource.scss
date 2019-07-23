@@ -1,4 +1,5 @@
 $mainColor: #00bcdc;
+$topFontColor:#fff;
 @function vw($px) {
     @return ($px / 750) * 100vw;
   }
