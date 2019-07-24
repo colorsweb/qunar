@@ -58,7 +58,6 @@ export default {
         .headerInput{
             flex-grow: 1;
             color:#aaa;
-            height: vw(64);
             line-height: vw(64);
             background: $topFontColor;
             border-radius: 5px;

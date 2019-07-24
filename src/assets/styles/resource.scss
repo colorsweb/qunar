@@ -3,3 +3,8 @@ $topFontColor:#fff;
 @function vw($px) {
     @return ($px / 750) * 100vw;
   }
+@mixin text-hide {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
