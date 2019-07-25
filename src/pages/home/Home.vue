@@ -50,7 +50,7 @@ export default {
             }
         }
     },
-    mounted(){
+    beforeMount(){
         this.getInfo()
     }
 }

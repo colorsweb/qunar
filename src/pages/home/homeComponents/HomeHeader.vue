@@ -26,12 +26,14 @@
             </svg>
             输入城市/景点/游玩主题
         </div>
-        <div class="headerRight">
-            {{city}}
-            <svg class="downArrow">
-                <use xlink:href="#downArrow"/>
-            </svg>
-        </div>
+        <router-link to="/city">
+            <div class="headerRight">
+                {{city}}
+                <svg class="downArrow">
+                    <use xlink:href="#downArrow"/>
+                </svg>
+            </div>
+        </router-link>
     </div>
 </template>
 <script>
@@ -77,7 +79,8 @@ export default {
         }
         .headerRight{
             width:vw(124);
-            text-align: center;   
+            text-align: center;
+            color: $topFontColor;   
             .downArrow{
                 width:vw(20);
                 height:vw(20);
