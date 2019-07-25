@@ -6,24 +6,25 @@
             猜你喜欢
         </div>
         <ul class="like-items">
-            <li class="item">
+            <li class="item" v-for="item of likeList" :key="item.id">
                 <div class="item-left">
-                    <img src="http://img1.qunarzz.com/sight/p0/1903/b6/b6255aaa6dd79ac6a3.img.jpg_200x200_f54c65bd.jpg" alt="">
+                    <img :src=item.imgUrl>
                     <div class="img-tag">可订明日</div>
                 </div>
                 <div class="item-right">
-                    <div class="right-title">三亚海上观光巴士</div>
+                    <div class="right-title">{{item.title}}</div>
                     <div class="right-star">
                         <img src="@/assets/styles/star.svg">
                         <img src="@/assets/styles/star.svg">
                         <img src="@/assets/styles/star.svg">
                         <img src="@/assets/styles/star.svg">
                         <img src="@/assets/styles/star.svg">
-                        <span>890条评论</span>
+                        <span>{{item.count}}条评论</span>
                     </div>
                     <div class="right-cost">
-                        <span class="cost-left">￥<em>19.9</em></span> 起
-                        <span class="cost-right">三亚</span>
+                        <span class="cost-left">￥<em>{{item.money}}</em></span>
+                        <span class="qi">起</span>
+                        <span class="cost-right">{{item.area}}</span>
                     </div>
                 </div>
             </li>
@@ -33,7 +34,10 @@
 </template>
 <script>
 export default {
-    name:'HomeRecommend'
+    name:'HomeRecommend',
+    props:{
+        likeList:Array
+    }
 }
 </script>
 <style lang="scss" scoped>
@@ -97,19 +101,24 @@ export default {
                         }
                     }
                     .right-cost{
-                        line-height: vw(44);
+                        display: flex;
+                        align-items: center;
+                        height: vw(44);
                         margin-top: vw(20);
                         font-size: vw(24);
                         color: #616161;
-                        .cost-left{
-                            
+                        .cost-left{                           
                             color: #ff8300;
                         }
                         em{
                             font-size: vw(40);
                         }
                         .cost-right{
-                            margin-left: vw(280);
+                            margin-left:auto;
+                            margin-right: vw(20)
+                        }
+                        .qi{
+                            margin-left: vw(10);
                         }
                     }
                 }
