@@ -2,7 +2,11 @@
     <div class="container">
             <div class="title">热门城市</div>
             <ul class="city-link">
-                <li class="city" v-for="item of hotCities" :key="item.id">
+                <li class="city" 
+                v-for="item of hotCities" 
+                :key="item.id"
+                @click="handleClick(item.name)"
+                >
                     {{item.name}}
                 </li>
             </ul>
@@ -13,6 +17,12 @@ export default {
     name:'HotCity',
     props:{
         hotCities:Array,
+    },
+    methods:{
+        handleClick(city){
+            this.$store.commit('changeCity',city)
+            this.$router.push({path:'/'})
+        }
     }
 }
 </script>

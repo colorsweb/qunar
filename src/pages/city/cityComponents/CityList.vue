@@ -1,28 +1,62 @@
 <template>
-    <div class="container">
-        <template  v-for="(val,name) in cities" >
-            <div class="title" :ref="name">{{name}}</div>
-            <div class="city" v-for="item of val" :key="item.id">
-                {{item.name}}
-            </div>
-        </template>
+    <div class="container" ref="wrapper">
+        <div>
+            <template  v-for="(val,name) in cities" >
+                <div class="title" :ref="name" >
+                    {{name}}
+                </div>
+                <div class="city" 
+                v-for="item of val" 
+                :key="item.id"
+                @click="handleClick(item.name)"
+                >
+                    {{item.name}}
+                </div>
+            </template>
+        </div>
     </div>
 </template>
 <script>
+import BScroll from 'better-scroll'
+
 export default {
     name:'CityList',
     props:{
         cities:Object,
         letter:String
     },
+    methods:{
+        handleClick(city){
+            this.$store.commit('changeCity',city)
+            this.$router.push({path:'/'})
+        }
+    },
     watch:{
         letter(){
-            this.$refs[this.letter][0].scrollIntoView();
+            this.scroll.scrollToElement(this.$refs[this.letter][0],300)
         }
+    },
+    mounted(){
+        //  this.$nextTick(() => {
+          this.scroll = new BScroll(this.$refs.wrapper,{
+              click:true
+          })
+        // });
     }
 }
 </script>
 <style lang="scss" scoped>
+    .container{
+        clear: both;
+        height: 80vh;
+        overflow: hidden;
+        // position: absolute;
+        // top:vw(400);
+        // left:0;
+        // right: 0;
+        // bottom: 0;
+    //    两种使用better-scroll的父元素定为方法
+    }
     .title{
         clear: both;
         font-size: vw(24);

@@ -1,7 +1,9 @@
 <template>
     <div class="header">
         <div class="header-top">
-                <img src="@/assets/styles/back.svg" alt="返回" @click="back">
+                <router-link to="/">
+                    <img src="@/assets/styles/back.svg" alt="返回">
+                </router-link>
             城市选择
         </div>
         <div class="header-bottom">
@@ -11,10 +13,13 @@
             >
         </div>
         <div class="search" v-if="value">
-            <div class="search-item" v-for="item of res">
+            <div class="search-item" 
+            v-for="item of res"
+            @click="handleClick(item)"
+            >
                 {{item}}
             </div>
-             <div class="none" v-show="!res.length">没有匹配结果</div>
+             <div v-show="show">没有匹配结果</div>
         </div>
         
     </div>
@@ -31,24 +36,31 @@ export default {
             res:[],
         }
     },
+    computed:{
+        show(){
+            return !this.res.length;
+        }
+    },
     methods:{
-        back(){
-            history.back();
+        handleClick(city){
+            this.$store.commit('changeCity',city)
+            this.$router.push({path:'/'})
+            this.value=''
         }
     },
     watch:{
         value(){
-            const res=[];
+           this.res=[];
             const arr=Object.values(this.cities);
             for(let i=0;i<arr.length;i++){
                 for(let j=0;j<arr[i].length;j++){
                     if(arr[i][j].name.includes(this.value)||
                     arr[i][j].spell.includes(this.value)){
-                        res.push(arr[i][j].name);
+                        this.res.push(arr[i][j].name);
                     }
                 }
             }
-            this.res=res;
+            
         }
     }
 }
@@ -92,13 +104,11 @@ export default {
         right: 0;
         bottom: 0;
         color:black;
+        z-index: 1;
     }
     .search-item{
         border-bottom: 1px solid #eee;
         line-height: vw(50);
     }
-    .none{
-        z-index: 2;
-        color:black;
-    }
+   
 </style>

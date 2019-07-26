@@ -28,7 +28,7 @@
         </div>
         <router-link to="/city">
             <div class="headerRight">
-                {{city}}
+                {{this.$store.state.city}}
                 <svg class="downArrow">
                     <use xlink:href="#downArrow"/>
                 </svg>
@@ -39,9 +39,6 @@
 <script>
 export default {
     name:'HomeHeader',
-    props:{
-        city:String
-    }
 }
 </script>
 <style lang="scss" scoped>
@@ -78,7 +75,7 @@ export default {
             }
         }
         .headerRight{
-            width:vw(124);
+            min-width:vw(124);
             text-align: center;
             color: $topFontColor;   
             .downArrow{
