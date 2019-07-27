@@ -6,7 +6,12 @@
             猜你喜欢
         </div>
         <ul class="like-items">
-            <li class="item" v-for="item of likeList" :key="item.id">
+            <router-link class="item" 
+            v-for="item of likeList" 
+            :key="item.id"
+            tag="li"
+            :to="'/detail/'+item.id"
+            >
                 <div class="item-left">
                     <img :src=item.imgUrl>
                     <div class="img-tag">可订明日</div>
@@ -27,7 +32,7 @@
                         <span class="cost-right">{{item.area}}</span>
                     </div>
                 </div>
-            </li>
+            </router-link>
             
         </ul>
     </div>
