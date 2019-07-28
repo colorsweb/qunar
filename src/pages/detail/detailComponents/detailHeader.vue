@@ -18,11 +18,16 @@ export default {
         }
     },
     activated(){
-        window.addEventListener('scroll',this.handleScroll)
+        document.addEventListener('scroll',this.handleScroll)
+    },
+    deactivated(){
+        document.removeEventListener('scroll',this.handleScroll)
     },
     methods:{
-        handleScroll(){
-            let scrTop=document.documentElement.scrollTop
+        handleScroll(){          
+            let scrTop=document.compatMode==='CSS1Compat'?
+            document.documentElement.scrollTop:document.body.scrollTop
+            console.log('scroll')
             if(scrTop>50){
                 this.show=true
                 this.$refs.header.style.opacity=(scrTop-50)/200
