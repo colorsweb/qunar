@@ -6,7 +6,9 @@
         </div>
         <div class="pic">
             <slot name="img"></slot>
+            <div class="clear"></div>
         </div>
+        
     </div>
 </template>
 <script>
@@ -43,5 +45,8 @@ export default {
     }
     .pic{
         padding:vw(20);
+    }
+    .clear{
+        clear: both;
     }
 </style>

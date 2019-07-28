@@ -27,19 +27,24 @@
                 <img src="http://img1.qunarzz.com/sight/p0/1906/e7/e7276de002459b50a3.img.jpg_350x240_dd696261.jpg" alt="" class="scene" @click="handleImgClick">
                 <img src="http://img1.qunarzz.com/sight/p0/1906/e8/e88430aafb498100a3.img.jpg_350x240_cc778652.jpg" alt="" class="scene" @click="handleImgClick">
             </template>
+            
         </scenic-pic>
-        <scene-swiper v-show="swiperShow" @change="changeSwiper" />
+        <fade>
+            <scene-swiper v-show="swiperShow" @change="changeSwiper" />
+        </fade>
     </div>
 </template>
 <script>
 import ScenicPic from '../../common/ScenicPic'
 import SceneSwiper from '../../common/sceneSwiper'
+import Fade from '../../common/fade'
 
 export default {
     name:'DetailBanner',
     components:{
         ScenicPic,
-        SceneSwiper
+        SceneSwiper,
+        Fade
     },
     data(){
         return{
@@ -68,7 +73,6 @@ export default {
 <style lang="scss" scoped>
     .banner{
         color:#fff;
-        position: relative;
     }
     .image{
         width: 100%;
@@ -95,7 +99,7 @@ export default {
         line-height: vw(60);
         background: rgba(0,0,0,0.5);
         left: vw(40);
-        bottom:vw(85);
+        top:vw(270);
         border-radius: vw(20);
        
         img{
@@ -110,14 +114,14 @@ export default {
     .desc{
         position: absolute;
         left:vw(40);
-        bottom:vw(35);
+        top:vw(330);
         font-size: vw(36);
     }
     .bottom-opa{
         position: absolute;
         width: 100%;
         height: vw(30);
-        bottom: vw(13);
+        top: vw(385);
         background-image: linear-gradient(to top,rgba(0,0,0,.8),rgba(0,0,0,0))
     }
     .scene{

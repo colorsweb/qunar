@@ -13,6 +13,7 @@
                     {{item.name}}
                 </div>
             </template>
+            <div class="clear"></div>
         </div>
     </div>
 </template>
@@ -48,7 +49,7 @@ export default {
 <style lang="scss" scoped>
     .container{
         clear: both;
-        height: 80vh;
+        height: 70vh;
         overflow: hidden;
         // position: absolute;
         // top:vw(400);
@@ -72,6 +73,9 @@ export default {
         line-height: vw(90);
         text-align: center;
         @include text-hide;
+    }
+    .clear{
+        clear: both;
     }
 </style>
 
