@@ -123,7 +123,9 @@ export default {
                             margin-right: vw(20)
                         }
                         .qi{
-                            margin-left: vw(10);
+                            left: vw(10);
+                            position: relative;
+                            top:vw(5)
                         }
                     }
                 }

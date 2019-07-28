@@ -1,17 +1,25 @@
 <template>
-    <banner />
+    <div>
+        <detail-banner />
+        <detail-header />
+        <div class="test"></div>
+    </div>
 </template>
 <script>
-import Banner from './detailComponents/Banner'
+import DetailBanner from './detailComponents/detailBanner'
+import DetailHeader from './detailComponents/detailHeader'
 
 export default {
     name:'Detail',
     components:{
-        Banner
+        DetailBanner,
+        DetailHeader
     }
 }
 </script>
 <style lang="scss" scoped>
-
+    .test{
+        height: 150vh;
+    }
 </style>
 

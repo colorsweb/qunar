@@ -36,7 +36,7 @@ import ScenicPic from '../../common/ScenicPic'
 import SceneSwiper from '../../common/sceneSwiper'
 
 export default {
-    name:'Banner',
+    name:'DetailBanner',
     components:{
         ScenicPic,
         SceneSwiper
