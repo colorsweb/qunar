@@ -24,7 +24,8 @@ export default {
     name:'CityList',
     props:{
         cities:Object,
-        letter:String
+        letter:String,
+        letter2:String
     },
     methods:{
         handleClick(city){
@@ -35,6 +36,9 @@ export default {
     watch:{
         letter(){
             this.scroll.scrollToElement(this.$refs[this.letter][0],300)
+        },
+        letter2(){
+            this.scroll.scrollToElement(this.$refs[this.letter2][0],200)
         }
     },
     mounted(){

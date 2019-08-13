@@ -24,10 +24,9 @@ export default {
         document.removeEventListener('scroll',this.handleScroll)
     },
     methods:{
-        handleScroll(){          
+        handleScroll(){        
             let scrTop=document.compatMode==='CSS1Compat'?
             document.documentElement.scrollTop:document.body.scrollTop
-            console.log('scroll')
             if(scrTop>50){
                 this.show=true
                 this.$refs.header.style.opacity=(scrTop-50)/200

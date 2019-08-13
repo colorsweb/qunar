@@ -13,6 +13,6 @@ export default {
         opacity: 0;
     }
     .v-enter-active, .v-leave-active{
-        transition: 1s;
+        transition: 1s; 
     }
 </style>

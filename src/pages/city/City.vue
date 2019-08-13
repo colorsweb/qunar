@@ -7,10 +7,12 @@
         <city-list 
         :cities="cities" 
         :letter="letter"
+        :letter2="letter2"
         />
         <city-sliding 
         :cities="cities"
         @change="handleLetter"
+        @changeY="handleChangeY"
         />
     </div>
 </template>
@@ -34,6 +36,7 @@ export default {
             hotCities:[],
             cities:{},
             letter:'',
+            letter2:''
         }
     },
     methods:{
@@ -51,6 +54,9 @@ export default {
         },
         handleLetter(lett){
             this.letter=lett;
+        },
+        handleChangeY(letter){
+            this.letter2=letter
         }
     },
     mounted(){

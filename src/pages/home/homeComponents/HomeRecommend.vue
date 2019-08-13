@@ -10,7 +10,7 @@
             v-for="item of likeList" 
             :key="item.id"
             tag="li"
-            :to="'/detail/'+item.id"
+            :to="`/detail/${item.id}`"
             >
                 <div class="item-left">
                     <img :src=item.imgUrl>
