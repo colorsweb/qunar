@@ -3,10 +3,20 @@
         <detail-banner />
         <detail-header />
         <detail-list :list="list" />
+        <router-link :to="`/detail/${$route.params.id}/eva`">
+            <div class="info">评价</div>
+        </router-link>
+        <router-link :to="`/detail/${$route.params.id}/intro`">
+            <div class="info">简介</div>
+        </router-link>
+        <fade>
+            <router-view></router-view>
+        </fade>
         <div class="test"></div>
     </div>
 </template>
 <script>
+import Fade from '../common/fade'
 import DetailBanner from './detailComponents/detailBanner'
 import DetailHeader from './detailComponents/detailHeader'
 import DetailList from './detailComponents/detailList'
@@ -17,15 +27,28 @@ export default {
     components:{
         DetailBanner,
         DetailHeader,
-        DetailList
+        DetailList,
+        Fade
     },
     data(){
         return{
             list:[]
         }
     },
-    mounted(){
+    activated(){
         this.getInfo()
+    },
+    beforeRouteUpdate(to,from,next){
+        console.log(to.path)
+        next()
+    },
+    beforeRouteLeave (to, from , next) {
+        const answer = window.confirm('确定离开此页吗？')
+         if (answer) {
+             next()
+        } else {
+        next(false)
+        }
     },
     methods:{
         getInfo(){
@@ -49,6 +72,14 @@ export default {
 <style lang="scss" scoped>
     .test{
         height: 150vh;
+    }
+    .info{
+        float: left;
+        width: 50%;
+        line-height: vw(80);
+        text-align: center;
+        background: rgb(120, 230, 184);
+        border-right: 2px dotted red;
     }
 </style>
 

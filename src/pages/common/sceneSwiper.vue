@@ -24,8 +24,7 @@ export default {
                 pagination : '.swiper-pagination',
                 observer:true,
                 observeParents:true,
-                paginationType:'fraction',
-                hashnav:true
+                paginationType:'fraction',  
             }
         }
     },

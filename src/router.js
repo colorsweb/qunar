@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Home from './pages/home/Home'
 import City from './pages/city/City'
 import Detail from './pages/detail/Detail'
+import Eva from './pages/detail/detailChildren/Eva'
+import Intro from './pages/detail/detailChildren/Intro'
 
 Vue.use(Router)
 
@@ -23,7 +25,19 @@ export default new Router({
     {
       path:'/detail/:id',
       name:'Detail',
-      component:Detail
+      component:Detail,
+      children:[
+        {
+          path:'eva',
+          name:'Eva',
+          component:Eva
+        },
+        {
+          path:'intro',
+          name:'Intro',
+          component:Intro
+        }
+      ]
     }
   ],
   scrollBehavior (to, from, savedPosition) {
