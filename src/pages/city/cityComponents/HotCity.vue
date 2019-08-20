@@ -20,7 +20,7 @@ export default {
     },
     methods:{
         handleClick(city){
-            this.$store.commit('changeCity',city)
+            this.$store.dispatch('someAction',city)
             this.$router.push({path:'/'})
         }
     }

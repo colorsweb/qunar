@@ -10,5 +10,10 @@ export default new Vuex.Store({
             state.city=city
             localStorage.city=city
         }
+    },
+    actions:{
+        someAction(context,city){
+            context.commit('changeCity',city)
+        }
     }
 })
