@@ -15,5 +15,9 @@ Vue.use(VueAwesomeSwiper)
 new Vue({
   router,
   store,
-  render: h => h(App)
+  render: h => h(App),
+  // 添加mounted，不然不会执行预编译
+  mounted() {
+    document.dispatchEvent(new Event('render-event'));
+  }
 }).$mount('#app')

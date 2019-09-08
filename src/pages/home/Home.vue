@@ -1,5 +1,6 @@
 <template>
     <div class="home">
+        <h1>hi</h1>
         <home-header />
         <home-swiper :imgList="imgList" />
         <home-icons :list="iconList" />
@@ -35,7 +36,7 @@ export default {
     },
     methods:{
         getInfo(){
-            axios.get('/api/index.json?city='+this.$store.state.city)
+            axios.get('/mock/index.json?city='+this.$store.state.city)
             .then(this.getInfoSucc)
         },
         getInfoSucc(res){
