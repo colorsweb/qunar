@@ -14,18 +14,8 @@ module.exports = {
           }
       }
   },
-  devServer:{
-      proxy:{
-          '/api':{
-              target:'http://localhost:8080',
-              changeOrigin:true,
-              pathRewrite:{
-                  '^/api':'/mock'
-              }
-          }
-      }
-  },
-  configureWebpack: () => {
+ 
+  configureWebpack: config => {
     if (process.env.NODE_ENV !== 'production') return;
     return {
       plugins: [
@@ -36,7 +26,19 @@ module.exports = {
           staticDir: path.join(__dirname, 'dist'),
   
           // 对应自己的路由文件，比如a有参数，就需要写成 /a/param1。
-          routes: ['/', '/city'],
+          routes: ['/','/city'],
+
+          devServer:{
+            proxy:{
+                '/api':{
+                    target:'http://localhost:8080',
+                    changeOrigin:true,
+                    pathRewrite:{
+                        '^/api':'/mock'
+                    }
+                }
+            }
+        },
   
           // 这个很重要，如果没有配置这段，也不会进行预编译
           renderer: new Renderer({
