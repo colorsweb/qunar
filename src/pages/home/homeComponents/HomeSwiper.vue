@@ -20,6 +20,7 @@ export default {
                 // loop使最后的图和第一张衔接
                 pagination : '.swiper-pagination',
                 autoplay:3000,
+                //用户操作后，是否禁止autoplay，设为false后重新计时
                 autoplayDisableOnInteraction:false
             }
         }

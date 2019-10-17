@@ -41,7 +41,9 @@ export default {
         color:#fff;
     }
     .container ::v-deep .swiper-container{
+        // 默认hidden，改为inherit使下方数字显示
         overflow:inherit;
+        //宽度填充视口
         width: 100%;
     }
     .container{

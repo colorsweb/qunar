@@ -23,6 +23,7 @@ export default {
         return{
             swiperOption:{
                  pagination : '.swiper-pagination',
+                 //导航标志能否点击
                  paginationClickable :true,
             }  
         }

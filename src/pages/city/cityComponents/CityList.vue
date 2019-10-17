@@ -60,7 +60,7 @@ export default {
         // left:0;
         // right: 0;
         // bottom: 0;
-    //    两种使用better-scroll的父元素定为方法
+    //    两种使用better-scroll的父元素定位方法
     }
     .title{
         clear: both;

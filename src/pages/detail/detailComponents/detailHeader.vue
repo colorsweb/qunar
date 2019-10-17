@@ -24,7 +24,8 @@ export default {
         document.removeEventListener('scroll',this.handleScroll)
     },
     methods:{
-        handleScroll(){        
+        handleScroll(){
+            //判断当前文档是混杂模式还是标准模式        
             let scrTop=document.compatMode==='CSS1Compat'?
             document.documentElement.scrollTop:document.body.scrollTop
             if(scrTop>50){

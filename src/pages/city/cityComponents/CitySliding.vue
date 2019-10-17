@@ -21,14 +21,19 @@ export default {
     methods:{
         letterClick(e){
             this.$emit('change',e.target.innerText)
+            console.log(e.target.classList)
         },
         handleTouch(e){
             // console.log(e.touches[0].clientY)
             const topY=e.currentTarget.offsetTop
             let curY=e.touches[0].clientY
-            let num=Math.floor((curY-topY)/18)
-            let letter2=this.$refs.letters[num].innerText
-            this.$emit('changeY',letter2)
+            try{
+                let num=Math.floor((curY-topY)/18)
+                let letter2=this.$refs.letters[num].innerText
+                this.$emit('changeY',letter2)
+            } catch(err) {
+                console.log(err)
+            }
         }
     }
 }
