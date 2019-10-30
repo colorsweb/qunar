@@ -35,7 +35,7 @@ export default {
     },
     methods:{
         getInfo(){
-            axios.get('/api/index.json?city='+this.$store.state.city)
+            axios.get('https://github.com/colorsweb/qunar/tree/gh-pages/dist/mock/index.json')
             .then(this.getInfoSucc)
         },
         getInfoSucc(res){

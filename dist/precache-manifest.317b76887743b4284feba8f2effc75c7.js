@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "5d970aef9aefefd41376",
+    "revision": "27720ace2472b75281b7",
     "url": "css/app.70fa9ccf.css"
   },
   {
-    "revision": "5d970aef9aefefd41376",
-    "url": "js/app.538ebeed.js"
+    "revision": "27720ace2472b75281b7",
+    "url": "js/app.6b178ca3.js"
   },
   {
     "revision": "c75588504ed4ae33dc2d",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "img/star.340a5dad.svg"
   },
   {
-    "revision": "eabad8b33e75835bd46ce059b27d9fdc",
+    "revision": "73a736253748255466750bf023d2d2a1",
     "url": "index.html"
   },
   {
@@ -40,11 +40,11 @@ self.__precacheManifest = [
     "url": "mock/detail.json"
   },
   {
-    "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
-    "url": "robots.txt"
-  },
-  {
     "revision": "cb3cf10f989c00100ccc5834daf443cf",
     "url": "mock/index.json"
+  },
+  {
+    "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
+    "url": "robots.txt"
   }
 ];

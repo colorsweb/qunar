@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.2561b402da4a5c5647f243200d0bd17f.js"
+  "precache-manifest.317b76887743b4284feba8f2effc75c7.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "vue-qunar"});
