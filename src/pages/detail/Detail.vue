@@ -32,16 +32,26 @@ export default {
     },
     data(){
         return{
-            list:[]
+            list:[{
+          "title": "成人票",
+          "children": [{
+            "title": "成人三馆联票",
+            "children": [{
+              "title": "成人三馆联票 - 某一连锁店销售"
+            }]
+          },{
+            "title": "成人五馆联票"
+          }]
+        }, {
+          "title": "学生票"
+        }, {
+          "title": "儿童票"
+        }, {
+          "title": "特惠票"
+        }]
         }
     },
-    activated(){
-        this.getInfo()
-    },
-    beforeRouteUpdate(to,from,next){
-        console.log(to.path)
-        next()
-    },
+   
     beforeRouteLeave (to, from , next) {
         const answer = window.confirm('确定离开此页吗？')
          if (answer) {
@@ -51,21 +61,21 @@ export default {
         }
     },
     methods:{
-        getInfo(){
-            axios.get('/api/detail.json',{
-                params:{
-                    id:this.$route.params.id
-                }
-            })
-            .then(this.getInfoSucc)
-        },
-        getInfoSucc(res){
-            res=res.data
-            if(res.ret){
-                const data=res.data.categoryList
-                this.list=data
-            }
-        }
+        // getInfo(){
+        //     axios.get('/api/detail.json',{
+        //         params:{
+        //             id:this.$route.params.id
+        //         }
+        //     })
+        //     .then(this.getInfoSucc)
+        // },
+        // getInfoSucc(res){
+        //     res=res.data
+        //     if(res.ret){
+        //         const data=res.data.categoryList
+        //         this.list=data
+        //     }
+        // }
     }
 }
 </script>

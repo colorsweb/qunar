@@ -7,6 +7,7 @@ import './assets/styles/border.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 import store from './store/index'
+import $ from 'jquery'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
