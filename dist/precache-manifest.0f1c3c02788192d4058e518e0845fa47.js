@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "27720ace2472b75281b7",
-    "url": "css/app.70fa9ccf.css"
+    "revision": "d7b58b9e06731101ad3e",
+    "url": "css/app.3d8f498a.css"
   },
   {
-    "revision": "27720ace2472b75281b7",
-    "url": "js/app.6b178ca3.js"
+    "revision": "d7b58b9e06731101ad3e",
+    "url": "js/app.3f271768.js"
   },
   {
-    "revision": "c75588504ed4ae33dc2d",
+    "revision": "2e60d44ab425595f183a",
     "url": "css/chunk-vendors.4062b2be.css"
   },
   {
-    "revision": "c75588504ed4ae33dc2d",
-    "url": "js/chunk-vendors.e91d2f0c.js"
+    "revision": "2e60d44ab425595f183a",
+    "url": "js/chunk-vendors.dd36a35b.js"
   },
   {
     "revision": "4e347924b4313ba58452787c1595b9f3",
@@ -28,16 +28,16 @@ self.__precacheManifest = [
     "url": "img/star.340a5dad.svg"
   },
   {
-    "revision": "73a736253748255466750bf023d2d2a1",
+    "revision": "7f7a6e5b63f1d1fc50d717e7ecfc24ad",
     "url": "index.html"
-  },
-  {
-    "revision": "325c39a846c0cce2db621400f676143d",
-    "url": "mock/city.json"
   },
   {
     "revision": "52e5a2b71653b92df288bd065b5754b2",
     "url": "mock/detail.json"
+  },
+  {
+    "revision": "325c39a846c0cce2db621400f676143d",
+    "url": "mock/city.json"
   },
   {
     "revision": "cb3cf10f989c00100ccc5834daf443cf",
