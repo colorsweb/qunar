@@ -3916,10 +3916,8 @@ export default {
         handleChangeY(letter){
             this.letter2=letter
         }
-    },
-    mounted(){
-        this.getInfo();
     }
+   
 }
 </script>
 <style lang="scss" scoped>
